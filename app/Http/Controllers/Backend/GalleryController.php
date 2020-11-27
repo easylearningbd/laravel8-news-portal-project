@@ -60,13 +60,12 @@ class GalleryController extends Controller
    public function VideoGallery(){
    	$video = DB::table('videos')->orderBy('id','desc')->paginate(5);
    	return view('backend.gallery.video',compact('video'));
-   }
+   }// END Methods 
 
 
    public function AddVideo(){
    	return view('backend.gallery.videocreate');
-   }
-
+   }// END Methods 
 
 
   public function StoreVideo(Request $request){
@@ -84,13 +83,8 @@ class GalleryController extends Controller
 
     	 return Redirect()->route('video.gallery')->with($notification);
 
-  }
-
-
-
-
-
-
+  }// END Methods 
+ 
 
 }
  
